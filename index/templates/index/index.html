@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="kr">
+{% load static %}
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E3I2조 미니 프로젝트</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'main/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'main/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+
+  <link href="{% static 'main/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main/assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+{% include 'common/nav.html'%}
+
+<!-- Modal -->
+
+  
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">E3I2조 Project에<br> <span>오신 것을 환영합니다.</span></h2>
+            <p data-aos="fade-up">R1mini란 OMOROBOT에서 출시한 ROS와 ROS2를 지원하는 모바일 로봇으로 초급자부터 전문가까지의 연구를 지원합니다. </p>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">시작하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1800">
+
+      <div class="carousel-item active" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_1.png' %} )"></div>
+      <div class="carousel-item" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_2.png' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_3.png' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_4.png' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_5.png' %})"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="get-started section-bg">
+      <div class="container">
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
+            <div class="content">
+              <h3>R1Mini is</h3>
+              <p>R1Mini는 딥러닝과 주행로봇을 동시에 연구하시는분 
+              <p>DC모터의 구동 방법과 주행로봇의 원리부터, SLAM과 영상처리까지 하나의 로봇으로 연구하고 싶으신 분
+              <p>ROS1과 ROS2 패키지를 동시에 지원하는 로봇을 서로 비교하면서 공부하고 싶으신 분
+              <p>마커인식, YOLO 구동, 마커 기반 SLAM, 라이다, 영상 기반 SLAM 등의 다양한 예제를 원하시는 분에게 추천드립니다.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="fade">
+            <form action="forms/quote.php">
+              <iframe width="700" height="400" src="https://www.youtube.com/embed/fnnqrX8AEiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </form>
+          </div><!-- End Quote Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Get Started Section -->
+
+    <!-- ======= Constructions Section ======= -->
+    <section id="constructions" class="constructions">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>제품 설명</h2>
+          <p></p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'main/assets/img/const/const1.png'%});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">ROS를 지원하는 모바일 로봇</h4>
+                    <p>R1mini는 ROS와 ROS2를 지원합니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'main/assets/img/const/const2.jpg' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">무료 온라인 ROS교육 제공</h4>
+                    <p>AI전문 개발자가 R1mini를 활용하여 강의하는 ROS온라인교육을 제공합니다</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'main/assets/img/const/const3.png' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">정밀 엔코더 모터 탑재</h4>
+                    <p>정밀 엔코더를 내장한 모터를 탑재하여
+                      흔들림 없는 안정적인 주행이 가능합니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'main/assets/img/const/const4.png' %});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">RGB LED / 헤드라이트 탑재</h4>
+                    <p>시리얼포트를 통해 색상코드를 출력해보세요.
+                      여러대가 모여있어도 내 로봇을 쉽게 찾을 수 있습니다.
+                      
+                    <p><br>또한 헤드라이트를 켜면 어두운 곳에서도 카메라로 사물을 식별할 수 있습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'main/assets/img/const/const5.png'%});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">전용 튜닝프로그램 제공</h4>
+                    <p>모터의 응답특성에 따라 주행성능이 달라집니다.
+                      전용 튜닝프로그램을 활용하여
+                      로봇을 더 빠르거나 부드럽게 제어할 수 있습니다</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url({% static 'main/assets/img/const/const6.png'%});"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">전용 3D 프린팅 케이스 3D data 제공</h4>
+                    <p>R1mini에 씌울 수 있는 멋진 케이스의 3D data를 제공합니다.
+                      탈착 가능한 카메라모듈 마운트와 함께 R1mini를 꾸며보세요!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Constructions Section -->
+
+          <!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section>
+    
+    <!-- End Alt Services Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row  g-2 d-flex">
+
+          <li class="nav-item col-4">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <h4>Battery</h4>
+            </a>
+          </li><!-- End tab nav item -->
+
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <h4>COLOR</h4>
+            </a><!-- End tab nav item -->
+
+          <li class="nav-item col-4">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <h4>Encoder Pulse</h4>
+            </a>
+          </li>
+          
+
+
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
+                <h3>배터리 잔량</h3>
+                <p class="fst-italic">
+                  OMOROBOT R1Mini 배터리 잔량입니다.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> 배터리는 리튱이온 18650 입니다.</li>
+                  <li><i class="bi bi-check2-all"></i> 3S1p 3.7V 2600mAh 입니다.</li>
+                  <li><i class="bi bi-check2-all"></i> 전원 출력은 5V 3A 입니다.</li>
+                  <li><i class="bi bi-check2-all"></i> 배터리 잔량은 %로 표시됩니다.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="{% static 'main/assets/img/bat.png'%}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>색상</h3>
+                <p class="fst-italic">
+                  OMOROBOT R1Mini 색상 입니다.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> Color RGB LED, 헤드라이트 LED가 있습니다.</li>
+                  <li><i class="bi bi-check2-all"></i> RGB는 5V(전압)입니다.</li>
+                  <li><i class="bi bi-check2-all"></i> 색상은 RGB로 표시됩니다.</li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'main/assets/img/led.png'%}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End tab content item -->
+
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
+                <h3>엔코더 펄스</h3>
+                <p class="fst-italic">
+                  OMOROBOT R1Mini 엔코더 펄스 입니다.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> 엔코더 펄스는 정수 값이면 전진 음수 값이면 후진입니다.</li>
+                  <li><i class="bi bi-check2-all"></i> 기어 모터는 JGA25-370 최대 RPM 280입니다.</li>
+                  <li><i class="bi bi-check2-all"></i> 왼쪽 바퀴 오른쪽 바퀴 각각 따로 전진 후진 설정 가능합니다. </li>
+                </ul>
+                
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="{% static 'main/assets/img/wheel.png'%}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Our Projects Section ======= -->
+    <section id="projects" class="projects">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>OMOROBOT의 제품들</h2>
+          <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+          <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-remodeling">R1 v2</li>
+            <li data-filter=".filter-construction">DonkiBot-S</li>
+            <li data-filter=".filter-repairs">DonkiBot-I</li>
+            <li data-filter=".filter-design">PL1500</li>
+          </ul><!-- End Projects Filters -->
+
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/r1_v2/R1V2_1.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>R1 v2 1</h4>
+                  <p>R1 v2 1</p>
+                  <a href="{% static 'main/assets/img/r1_v2/R1V2_1.png'%}" title="R1v2 1" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/donkibot-s/DonkiBot-S_1.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DonkiBot-S 1</h4>
+                  <p>DonkiBot-S 1</p>
+                  <a href="{% static 'main/assets/img/donkibot-s/DonkiBot-S_1.png'%}" title="DonkiBot-S 1" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/DonkiBot-I/DonkiBot-I_1.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DonkiBot-I 1</h4>
+                  <p>DonkiBot-I 1</p>
+                  <a href="{% static 'main/assets/img/DonkiBot-I/DonkiBot-I_1.png'%}" title="DonkiBot-I 1" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/PL1500/PL1500_1.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>PL1500 1</h4>
+                  <p>PL1500 1</p>
+                  <a href="{% static 'main/assets/img/PL1500/PL1500_1.png'%}" title="Repairs 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/r1_v2/R1V2_2.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>R1 v2 2</h4>
+                  <p>R1 v2 2</p>
+                  <a href="{% static 'main/assets/img/r1_v2/R1V2_2.png'%}" title="R1 v2 2" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/donkibot-s/DonkiBot-S_2.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DonkiBot-S 2</h4>
+                  <p>DonkiBot-S 2</p>
+                  <a href="{% static 'main/assets/img/donkibot-s/DonkiBot-S_2.png'%}" title="DonkiBot-S 2" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/DonkiBot-I/DonkiBot-I_2.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DonkiBot-I 2</h4>
+                  <p>DonkiBot-I</p>
+                  <a href="{% static 'main/assets/img/DonkiBot-S/DonkiBot-I_2.png'%}" title="DonkiBot-I 2" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/PL1500/PL1500_2.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>PL1500 2</h4>
+                  <p>PL1500 2</p>
+                  <a href="{% static 'main/assets/img/PL1500/PL1500_2.png'%}" title="PL1500 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/r1_v2/R1V2_3.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>R1 v2 3</h4>
+                  <p>R1 v2 3</p>
+                  <a href="{% static 'main/assets/img/r1_v2/R1V2_3.png'%}" title="R1 v2 3" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/donkibot-s/DonkiBot-S_3.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DonkiBot-S 3</h4>
+                  <p>DonkiBot-S 3</p>
+                  <a href="{% static 'main/assets/img/donkibot-s/DonkiBot-S_3.png'%}" title="DonkiBot-S 3" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/DonkiBot-I/DonkiBot-I_3.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>DonkiBot-I 3</h4>
+                  <p>DonkiBot-I 3</p>
+                  <a href="{% static 'main/assets/img/DonkiBot-I/DonkiBot-I_3.png'%}" title="DonkiBot-I 3" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="{% static 'main/assets/img/PL1500/PL1500_3.png'%}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>PL1500 3</h4>
+                  <p>PL1500 3</p>
+                  <a href="{% static 'main/assets/img/PL1500/PL1500_3.png'%}" title="PL1500 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <!-- <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+          </div><!-- End Projects Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Projects Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+{% include 'common/testimonials.html'%}
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+{% include 'common/footer.html'%}
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'main/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main/assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

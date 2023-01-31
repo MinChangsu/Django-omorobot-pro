@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'insert/css/bat.css' %}" media="screen" >
+    <link rel="stylesheet" href="{% static 'insert/css/color.css' %}" media="screen" >
+    <link rel="stylesheet" href="{% static 'insert/css/write_page.css' %}" media="screen" >
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- page title -->
+        <div id="main" class="main">
+            <div class="pagetitle">
+                <h1 class="font-test"><b>오모로봇 R1 mini</b></h1>
+                <p style="font-family : 'lobster'">오모로봇의 현재 상태를 입력해보자!</p>
+            </div>
+
+            <section class="section">
+                <div class="row">
+                    <div class="col-lg-4 my-3 bg">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>배터리 입력</b></h5>
+                                <form class="form" onsubmit="return false;">
+                                    <input type="number" autocomplete="off" class="bat form-control" id="bat_input" name="bat_num" min="0" max="100" placeholder="배터리 잔량&nbsp;(%)" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <input class="bat_submit btn btn-info float-right" value="입력" type="submit" id="bat_submit"></input>
+                                </form>
+                                <br>
+                                <br>
+                                <div id="card-bat-rest"></div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="wrapper">
+                                                    <div class="circle-wrapper heart">
+                                                        <div class="circle">
+                                                            <div class="bar"></div>
+                                                            <div class="box">
+                                                            <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- lED 색상 입력 -->
+                    <div class="col-lg-4 my-3 bg">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>LED 색상</b></h5>
+                                <form name="rgb" onsubmit="return false;">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            R:<input type=text class="r form-control" min=0 max=255 name=r size=3>
+                                        </div>
+                                        <div class="col-4">
+                                            G:<input type=number class="g form-control" min=0 max=255 name=g size=3>
+                                        </div>
+                                        <div class="col-4">
+                                            B:<input type=number class="b form-control" min=0 max=255 name=b size=3>
+                                         </div>
+                                    </div>
+                                    <input name="rgb-btn" class="btn btn-info float-right" value="입력" type="submit" id="button-addon2">
+                                    <p type=text class="hex" size="8"></p>
+                                </form>
+                                <br>
+                                <br>
+                                <div id="card-rgb-chg"></div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-danger red" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <br>
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-success green" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <br>
+                                                <div class="progress">
+                                                  <div class="progress-bar bg-info blue" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <br>
+                                                <div class="progress">
+                                                  <div class="progress-bar-col" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 엔코더 회전수 -->
+                    <div class="col-lg-4 my-3 bg">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"><b>엔코더 회전수</b></h5>
+                                <form onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-6">
+                                        왼쪽 바퀴 :
+                                        <input class="aa form-control" id="rpm1"  value="0" min=0 max=999 type="number" placeholder="RPM">
+                                    </div>
+                                    <div class="col-6">
+                                        오른쪽 바퀴 :
+                                        <input class="bb form-control" id="rpm2"  value="0" min=0 max=999 type="number" placeholder="RPM">
+                                    </div>
+                                </div>
+                                <input name="rgb-btn" class="cc btn btn-info float-right" value="입력" type="submit">
+                                 </form>
+                                <br>
+                                <br>
+                                <div id="card-enc-wheel">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="card">
+                                                <div class="card-body card-body-wheel">
+                                                    <div class="l1__area"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card">
+                                                <div class="card-body card-body-wheel">
+                                                    <div class="r1__area" ></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main end -->
+
+
+            </section>
+
+        </div>
+    </div>
+<script src="{% static 'insert/js/write2.js' %}"></script>
+</body>
+</html>

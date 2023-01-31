@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="kr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E3I2조 - 제품 설명 자세히 보기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'main/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'main/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'main/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main/assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+{% include 'common/nav.html'%}
+
+<!-- Modal -->
+
+  
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_3.png'%});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>자세히 보기</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'details' 0%}">About</a></li>
+          <li>Detail</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section style="padding: 40px;" id="service-details" class="service-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="services-list">
+              <a href="{% url 'details' 1%}" class="active">로봇 살펴보기</a>
+              <a href="{% url 'details' 2%}">로봇 ON/OFF</a>
+              <a href="{% url 'details' 3%}">충전하기</a>
+              <a href="{% url 'details' 4%}">통신 명령표</a>
+              <a href="{% url 'details' 5%}">Protocol Test Programs</a>
+              <a href="{% url 'details' 6%}">시리얼 통신으로 로봇 다루기</a>
+            </div>
+
+            <h4><a style="color: #364d59;" href="#get-started">로봇 살펴보기</a></h4>
+            <p><a style="color: #364d59;" href="#get-started11">R1 mini Baic</a></p>
+            <p><a style="color: #364d59;" href="#get-started12">메인보드 구성</a></p>
+            <p><a style="color: #364d59;" href="#get-started13">메인보드 도식도</a></p>
+
+          </div>
+
+          <div class="col-lg-8">
+            <h2 style="font-weight: bold;"><section style="padding: 0;" id="get-started">로봇 살펴보기</section></h2>
+            <h3><section style="padding: 0;" id="get-started11">R1 mini Basic</section></h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">본체</span></li>
+            </ul>
+            <img src="{% static 'main/assets/img/details1/1.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+
+            <h3><br/><section style="padding: 0;" id="get-started12">메인보드 구성</section></h3>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">위에서 본 모습</span></li>
+            </ul>
+            <img src="{% static 'main/assets/img/details1/2.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">좌측에서 본 모습</span></li>
+            </ul>
+            <img src="{% static 'main/assets/img/details1/3.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+
+            <h3><section style="padding: 0;" id="get-started13">메인보드 구성 도식도</section></h3>
+            <img src="{% static 'main/assets/img/details1/4.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'common/footer.html'%}
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'main/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main/assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

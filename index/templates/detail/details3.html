@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="kr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E3I2조 - 제품 설명 자세히 보기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'main/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'main/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'main/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main/assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+{% include 'common/nav.html'%}
+
+<!-- Modal -->
+
+  
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_3.png'%});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>자세히 보기</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'details' 0%}">About</a></li>
+          <li>Detail</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section style="padding: 40px;" id="service-details" class="service-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="services-list">
+              <a href="{% url 'details' 1%}">로봇 살펴보기</a>
+              <a href="{% url 'details' 2%}">로봇 ON/OFF</a>
+              <a href="{% url 'details' 3%}" class="active">충전하기</a>
+              <a href="{% url 'details' 4%}">통신 명령표</a>
+              <a href="{% url 'details' 5%}">Protocol Test Programs</a>
+              <a href="{% url 'details' 6%}">시리얼 통신으로 로봇 다루기</a>
+            </div>
+
+            <h4><a href="#get-started1" style="color: #364d59;">충전하기</a></h4>
+            <p><a href="#get-started11" style="color: #364d59;">충전 어답터 연결</a></p>
+            <p><a href="#get-started12" style="color: #364d59;">배터리 확인</a></p>
+          </div>
+
+          <div class="col-lg-8">
+            <h2 style="font-weight: bold;"><section style="padding: 0;" id="get-started1">충전하기</section></h2>
+            <h3><section style="padding: 0;" id="get-started11">충전 어답터 연결</section></h3>
+              <ul>
+                <li><i class="bi bi-exclamation-circle" style="font-size: 32px; color:red"></i> <span style="font-weight: bold;">로봇의 충전이 완료되면 충전기를 제거해주세요.<br/>
+                  방치하는 경우 과 충전으로 인한 발열 또는 화재의 위험이 있습니다.</span></li>
+                  <br/>
+
+                  <li><i class="bi bi-exclamation-square" style="font-size: 32px; color:red"></i> <span style="font-weight: bold;">R1mini Pro의 경우, 로봇 본체와 젯슨 나노 보드의 충전 단자가 유사합니다.
+                    <br/>젯슨 나노의 충전 단자(5V)에 동봉 충전기(12V)를 꽂아 사용할 경우,
+                    <br/>젯슨 나노가 파손 될 수 있으므로 주의하시기 바랍니다.</span></li>
+              </ul>
+              <img src="{% static 'main/assets/img/details3/1.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br>
+            <p>
+              R1mini의 다양한 전원 옵션 중, 로봇 전체에 전원을 인가하면서 로봇의 배터리를 충전하는 것은 <a style="font-weight: bold;">좌측 바퀴 옆</a> 충전 단자입니다.
+            </p>
+            <p>
+              로봇은 동봉 된 12V 충전 어답터를 사용해 충전할 수 있습니다.
+            </p>
+            <p>
+              장시간 작업이 필요한 경우엔 아래와 같이 충전하며 사용이 가능합니다.
+            </p>
+
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">실제 충전 모습</span></li>
+            </ul>
+            <img src="{% static 'main/assets/img/details3/2.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <br/>
+            <h3><section style="padding: 0;" id="get-started12">배터리 확인</section></h3>
+            <ul>
+              <li><i class="bi bi-exclamation-circle" style="font-size: 32px; color:blue"></i> <span style="font-weight: bold;">충전기가 연결된 상태에서는 실제 배터리 용량보다 더 많이 표시될 수 있습니다.</span></li>
+            </ul>
+
+            <p>
+              로봇을 켠 다음 언제든지 배터리 상태를 확인할 수 있습니다.
+            </p>
+            <p>
+              아래 그림과 같이 전원 버튼 우측의 스위치를 짧게 누르면 됩니다.
+            </p>
+            <img src="{% static 'main/assets/img/details3/3.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <span style="text-align: center; font-size: 13px; color: rgba(136,153,168,1.00); margin: auto; display: block;">2개의 버튼 중 우측 버튼</span>
+            <br/>
+            <p>
+              그 후, RGB LED가 점등 되는 횟수를 보고 배터리 상태를 알 수 있습니다.
+            </p>
+            <br>
+            <img src="{% static 'main/assets/img/details3/4.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'common/footer.html'%}
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'main/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main/assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="kr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E3I2조 - 제품 설명 자세히 보기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'main/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'main/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'main/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main/assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+{% include 'common/nav.html'%}
+
+<!-- Modal -->
+
+  
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_3.png'%});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>자세히 보기</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'details' 0%}">About</a></li>
+          <li>Detail</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section style="padding: 40px;" id="service-details" class="service-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="services-list">
+              <a href="{% url 'details' 1%}">로봇 살펴보기</a>
+              <a href="{% url 'details' 2%}">로봇 ON/OFF</a>
+              <a href="{% url 'details' 3%}">충전하기</a>
+              <a href="{% url 'details' 4%}">통신 명령표</a>
+              <a href="{% url 'details' 5%}">Protocol Test Programs</a>
+              <a href="{% url 'details' 6%}" class="active">시리얼 통신으로 로봇 다루기</a>
+            </div>
+
+            <h4><a href="#get-started1" style="color: #364d59;">시리얼 통신으로 로봇 다루기</a></h4>
+            <p><a href="#get-started11" style="color: #364d59;">시리얼 케이블 연결</a></p>
+            <p><a href="#get-started12" style="color: #364d59;">아두이노 시리얼 모니터를 이용한 통신</a></p>
+            <h4><a href="#get-started2" style="color: #364d59;">로봇 정보 확인</a></h4>
+            <p><a href="#get-started21" style="color: #364d59;">Firmware Version 확인 - FIRMV</a></p>
+            <p><a href="#get-started22" style="color: #364d59;">모터 회전당 엔코더 펄스 수 확인 - ENCNT</a></p>
+            <p><a href="#get-started23" style="color: #364d59;">로봇 바퀴와 바퀴 사이의 거리 - TRACK</a></p>
+            <p><a href="#get-started24" style="color: #364d59;">로봇 기어비 확인 - GEAR</a></p>
+            <p><a href="#get-started25" style="color: #364d59;">바퀴 지름 확인 - WHLD</a></p>
+            <h4><a href="#get-started3" style="color: #364d59;">로봇 상태</a></h4>
+            <p><a href="#get-started31" style="color: #364d59;">배터리 확인 - BAT</p>
+            <h4><a href="#get-started4" style="color: #364d59;">로봇 LED 깜빡임 - BREATH</a></h4>
+            <p><a href="#get-started41" style="color: #364d59;">깜빡임 주기 확인하기</a></p>
+            <p><a href="#get-started42" style="color: #364d59;">깜빡임 주기 변경하기</a></p>
+            <h4><a href="#get-started5" style="color: #364d59;">로봇 LED 구동</a></h4>
+            <p><a href="#get-started51" style="color: #364d59;">현재 LED 설정 값 확인하기</a></p>
+            <p><a href="#get-started52" style="color: #364d59;">LED 설정값 변경하기</a></p>
+            <p><a href="#get-started53" style="color: #364d59;">LED 설정 값 저장하기</a></p>
+          </div>
+
+          <div class="col-lg-8">
+            <h2 style="font-weight: bold;"><section style="padding: 0;" id="get-started1">시리얼 통신으로 로봇 다루기</section></h2>
+            <h3 style="color: rgba(136,153,168,1.00);">해당 페이지는 R1mini의 통신 명령 요약표에 따라 작성되었습니다.</h4>
+
+              <ul>
+                <li><i class="bi bi-exclamation-circle" style="font-size: 32px; color:blue"></i><span style="font-weight: bold;">
+                  본 페이지에서는 R1mini의 모터를 구동하는 부분은 없습니다.<br/>
+                  시리얼 명령으로 R1mini의 모터를 구동하는 하는 명령은 있지만, <br/>
+                  원격으로 구동되는 로봇의 특성 상 일정 시간 내에 연속해서 구동 명령이 인가 되지 않을 경우 timeout 에러가 납니다.<br/>
+                  모터를 직접 구동하는 명령은 다음 장부터 다루게 됩니다.
+                </span></li>
+              </ul>
+              <br>
+              <h4><section style="padding: 0;" id="get-started11">
+                시리얼 케이블 연결</section>
+              </h4>
+              <p>
+                아래 보이는 것처럼 시리얼 케이블을 PC와 연결합니다.
+              </p>
+              <img src="{% static 'main/assets/img/details6/1.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <p><br/>
+                적절한 시리얼 통신 프로그램으로 연결합니다. 
+              </p>
+              <img src="{% static 'main/assets/img/details6/2.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <h4><section style="padding: 0;" id="get-started12">
+                아두이노 시리얼 모니터를 이용한 통신</section>
+              </h4>
+              <p>
+                만약 적절한 통신 프로그램을 찾는데 고민하고 있다면 아두이노를 이용해볼 것을 권장합니다.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span style="font-weight: bold;">아두이노 프로그램 설치 : <a href="https://www.arduino.cc/" target="_blank" style="color: blue;">아두이노 공식 홈페이지</a></span></li>
+              </ul>
+              <p>
+                다운 받은 프로그램을 실행하고 R1mini를 PC와 연결한 후에 포트를 R1mini를 지정합니다.
+              </p>
+              <img src="{% static 'main/assets/img/details6/3.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <p><br/>
+                그리고 난 후, 시리얼 모니터를 실행합니다.
+              </p>
+              <img src="{% static 'main/assets/img/details6/4.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br/>
+              <img src="{% static 'main/assets/img/details6/5.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <p>
+                이 상태에서 로봇의 전원을 켜게 되면 아래와 같은 메세지가 나타납니다.
+              </p>
+              <img src="{% static 'main/assets/img/details6/6.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br>
+              <h2 style="font-weight: bold;"><section style="padding: 0;" id="get-started2">로봇 정보 확인</section></h2>
+              <h4><section style="padding: 0;" id="get-started21">Firmware Version 확인 - FIRMV</section></h4>
+              <br>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qFIRMV
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  R1mini는 로봇으로 보내는 명령 중 로봇의 상태를 확인하는 종류의 모델은 $기호에 이어서 q를 붙여서 전송하면 됩니다. 
+                </li>
+              </ul>
+              <img src="{% static 'main/assets/img/details6/7.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br/>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  본 매뉴얼을 작성하던 시점(2020년 12월 말)에 R1mini의 펌웨어 버전은 r1m_r9_01_03입니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  그리고 R1mini에서는 명령에 대해 응답이 필요할 때 전송되는 데이터는 항상 기호 #이 붙어서 시작합니다. 
+                </li>
+              </ul>
+              <br>
+              <h4><section style="padding: 0;" id="get-started22">모터 회전당 엔코더 펄스 수 확인 - ENCNT</section></h4>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qENCNT
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  현재 설정된 모터 1회전당 엔코더의 펄스 수를 확인할 수 있습니다. <br/>
+                  이 설정은 sENCNT 명령으로 다른 값을 인가할 수 있지만, 모터의 엔코더 종류가 변하는 것이 아니라면 이 설정을 변경하는 것은 권장하지 않습니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  실행 결과는 아래와 같이 R1mini의 현재 엔코더 설정은 모터 기준 한 회전당 44펄스입니다.
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qENCNT
+              </li>
+              <li>
+                <a style="color: rgba(110,119,129,1.00);">#ENCNT, 44</a>
+                </li>
+              </ul>
+              <br>
+              <h4><section style="padding: 0;" id="get-started23">로봇 바퀴와 바퀴 사이의 거리 - TRACK</section></h4>
+              <img src="{% static 'main/assets/img/details6/8.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <ul>
+               <li><i class="bi bi-check-circle"></i><br>
+                로봇의 이동 거리와 방에 따라 계산하는 로봇 Odometry 정보를 알기 위해서는 위 그림에 표시된 바퀴 간 접지 중점의 거리가 필요합니다.
+               </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qTRACK
+              </li>
+              <li>
+                <a style="color: rgba(110,119,129,1.00);">#TRACK, 170.0</a>
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  위와 같이 q를 붙여서 $qTRACK라고 명령을 전송하면 #이 붙어서 TRACK은 170mm라고 응답이 오는 것을 확인할 수 있습니다.
+                </li>
+              </ul>
+              <br>
+              <h4><section style="padding: 0;" id="get-started24">
+                로봇 기어비 확인 - GEAR</section>
+              </h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  보통 모터는 기어와 함께 장착됩니다. R1mini의 기어비를 확인하는 명령은 GEAR입니다.
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qGEAR
+                </li>
+                <li>
+                <a style="color: rgba(110,119,129,1.00);">#GEAR, 21.3</a>
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  $qGEAR라는 명령으로 확인한 기어비는 21.3입니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  그러므로 모터 1회전당 44펄스가 나타나니, 바퀴 기준으로 보면 44*21.3으로 937.2펄스가 한 바퀴당 엔코더에서 나오는 펄스입니다
+                </li>
+               </ul>
+               <br>
+               <h4><section style="padding: 0;" id="get-started25">
+                바퀴 지름 확인 - WHLD</section>
+              </h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  로봇의 이동 거리를 모터에 장착된 엔코더에서 나오는 펄스의 숫자로 확인하고자 한다면 바퀴의 지름이 필요합니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  R1mini에서 바퀴의 지름을 확인하는 명령은 WHLD입니다.
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qWHLD
+                </li>
+                <li>
+                <a style="color: rgba(110,119,129,1.00);">#WHLD, 67.5</a>
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  위 명령의 결과를 보면 R1mini의 바퀴 지름은 67.5mm입니다. 
+                </li>
+               </ul>
+               <br>
+               <h3><section style="padding: 0;" id="get-started3">로봇 상태</section> </h3>
+               <h4><section style="padding: 0;" id="get-started31">배터리 확인 - BAT</section> </h4>
+               <br>
+               <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qBAT
+                </li>
+                <li>
+                <a style="color: rgba(110,119,129,1.00);">#BAT,127, 100, 5</a>
+                </li>
+              </ul>
+              <img src="{% static 'main/assets/img/details6/9.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  로봇의 배터리 상태를 확인하는 명령은  BAT입니다. <br>
+                  위 코드와 그림처럼 $qBAT라는 명령을 시리얼 통신으로 보내면 #BAT, volt, SOC, current로 응답이 옵니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  qBAT에 대한 응답인 #BAT의 각 인자의 의미는 아래와 같습니다.
+                  <li>
+                    volt : V 단위에 10을 곱한 값입니다. 위 그림의 예시에 따르면 127은 12.7Volt입니다.
+                  </li>
+                  <li>
+                    SOC : State Of Charge로 충전 상태로 위 그림의 예시에서는 100% 충전입니다.
+                  </li>
+                  <li>
+                    current : mA 단위입니다. 위 그림의 예시에서는 5mA로 0.005A입니다.
+                  </li>
+                </li>
+              </ul>
+              <br>
+              <h3><section style="padding: 0;" id="get-started4">로봇 LED 깜빡임 - BREATH</section> </h3>
+              <h4><section style="padding: 0;" id="get-started41">깜빡임 주기 확인하기</section> </h4>
+              <img src="{% static 'main/assets/img/details6/10.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  위 그림에 보이는 정면의 OMO라는 글자와 뒷 쪽의 LED는 같은 색상으로 같은 주기로 깜빡거립니다. 이 LED의 깜빡임 주기를 확인할 수 있는 명령입니다.
+                </li>
+               </ul>
+               <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qBREATH
+                </li>
+                <li>
+                <a style="color: rgba(110,119,129,1.00);">#BREATH, 500, 100, 50</a>
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  위 코드처럼 $qBREATH라고 명령을 보내면 현재 설정된  값이 보입니다. 
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  여러분들의 로봇은 위 그림과 코드의 결과와 다른 색상이나 깜빡임을 가질 수 있습니다. 
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  BREATH의 각 인자는 아래와 같습니다.
+                  <li>
+                    첫 번째 전체 주기 ms : ON/OFF를 합친 전체 주기를 설정합니다.
+                  </li>
+                  <li>
+                    두 번째 ON 시간 ms : LED가 On되는 시간을 설정합니다.
+                  </li>
+                  <li>
+                    두 번째 ON 시간 ms : LED가 On되는 시간을 설정합니다.
+                  </li>
+                  <li><i class="bi bi-check-circle"></i>
+                    위 예시에 따르면 500ms의 시간 동안 100ms의 on 시간과 50ms의 off 시간을 가지고 깜빡거리는 것입니다.
+                  </li>
+                  <li><i class="bi bi-check-circle"></i>
+                    여기서 100ms와 50ms를 더해서 500ms가 되지 않는 상황이 의문일 수 있지만, 완전 off되는 시간이 50ms이고 그 사이는 부드럽게 꺼지도록 하는 시간으로 채워집니다.
+                  </li>
+                </li>
+              </ul>
+              <img src="{% static 'main/assets/img/details6/11.gif'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br>
+              <h4><section style="padding: 0;" id="get-started42">깜빡임 주기 변경하기</section></h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  앞서 설명한 인자들을 이용해서, 5000ms의 주기에 500ms의 On 타임과 50ms의 Off 타임을 가지도록 설정하는 명령은 아래와 같습니다.
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $cBREATH, 5000, 500, 50
+              </ul>
+              <img src="{% static 'main/assets/img/details6/12.gif'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  그 결과는 위 그림처럼 됩니다. 
+                </li>
+              </ul>
+              <h3><section style="padding: 0;" id="get-started5">로봇 LED 구동</section></h3>
+              <h4><section style="padding: 0;" id="get-started51">현재 LED 설정 값 확인하기</section></h4>
+              <br>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $qCOLOR
+                </li>
+                <li>
+                <a style="color: rgba(110,119,129,1.00);">#COLOR, 128, 0, 255</a>
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  LED의 설정 값을 알고 싶다면 질의어(q)를 붙여서 COLOR라고 명령을 보내면 됩니다. 
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  그러면 위와 같이 #이 달려서 응답이 예를 들어 128,0,255라고 옵니다. 숫자는 순서대로 R, G, B의 값을 의미합니다.
+                </li>
+              </ul>
+              <br>
+              <h4><section style="padding: 0;" id="get-started52">LED 설정값 변경하기</section> </h4>
+              <br>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $cCOLOR, 0, 0, 255
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  위 코드와 같이 제어 명령을 의미하는 c를 붙여서 cCOLOR 명령으로 완전 파란색인 0,0,255를 명령으로 지정합니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  그러면 아래 그림처럼 전방 LED와 보드 뒷 편에 있는 LED가 모두 0,0,255의 색상 값인 BLUE로 변경됩니다.
+                </li>
+              </ul>
+              <img src="{% static 'main/assets/img/details6/13.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+              <br>
+              <h4><section style="padding: 0;" id="get-started53">LED 설정 값 저장하기</section></h4>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  LED 설정 값을 변경해도 전원을 다시 인가하면 해제됩니다. 전원을 다시 인가해도 이전의 설정을 유지하게 하는 방법은 저장 명령인 s를 이용해서 저장하는 것입니다.
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-code-slash" style="font-size: 24px; color:black">
+                </i>
+                $sCOLOR, 200, 0, 50
+                </li>
+              </ul>
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+                  위와 같이 명령을 주면 현재 LED의 설정도 변경되고 전원을 끊었다가 다시 기동해도 LED의 설정이 변경되지 않습니다.
+                </li>
+                <li><i class="bi bi-check-circle"></i>
+                  명령 앞에 prefix로 's'를 붙일 수 있는 옵션은 이렇게 전원 여부와 관계없이 저장할 수 있는 명령입니다.
+                </li>
+              </ul>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'common/footer.html'%}
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'main/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main/assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

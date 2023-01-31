@@ -1,0 +1,28 @@
+
+body{
+    min-width: 375px !important;
+}
+
+.circle-wrapper{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.l1__area, .r1__area{
+   font-size : 2em;
+   font-weight : bold;
+   text-align: center;
+
+}
+
+.card-body-wheel{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height : 100px;
+
+}
+
+
+

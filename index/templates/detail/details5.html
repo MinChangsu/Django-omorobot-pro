@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="kr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E3I2조 - 제품 설명 자세히 보기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'main/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'main/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'main/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main/assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+{% include 'common/nav.html'%}
+
+<!-- Modal -->
+
+  
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_3.png'%});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>자세히 보기</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'details' 0%}">About</a></li>
+          <li>Detail</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section style="padding: 40px;" id="service-details" class="service-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="services-list">
+              <a href="{% url 'details' 1%}">로봇 살펴보기</a>
+              <a href="{% url 'details' 2%}">로봇 ON/OFF</a>
+              <a href="{% url 'details' 3%}">충전하기</a>
+              <a href="{% url 'details' 4%}">통신 명령표</a>
+              <a href="{% url 'details' 5%}" class="active">Protocol Test Programs</a>
+              <a href="{% url 'details' 6%}">시리얼 통신으로 로봇 다루기</a>
+            </div>
+
+            <h4><a href="#get-started1" style="color: #364d59;">Protocol Test Program</a></h4>
+            <p><a href="#get-started11" style="color: #364d59;">설치하기</a></p>
+            <p><a href="#get-started12" style="color: #364d59;">사용 방법</a></p>
+          </div>
+
+          <div class="col-lg-8">
+            <h2 style="font-weight: bold;"><section style="padding: 0;" id="get-started1">Protocol Test Program</section></h2>
+            <h3 style="color: rgba(136,153,168,1.00);">Windows 환경에서 간단히 시리얼 포트를 열고 명령어를 테스트해볼 수 있는 프로그램입니다.</h4>
+
+              <ul>
+                <li><i class="bi bi-exclamation-circle" style="font-size: 32px; color:blue"></i> <span style="font-weight: bold;">이 프로그램은 Windows 10 64bit 가 설치된 PC에서 테스트 되었습니다.</span></li>
+              </ul>
+            <h4><section style="padding: 0;" id="get-started11">
+              설치하기
+              </section>
+            </h4>
+            <p>
+              아래 링크에서 설치 프로그램을 다운로드하여 설치하시면 됩니다.
+            </p>
+            <p>
+              <a href="https://drive.google.com/file/d/11i6EQ-Stot147QvE7Fm-MsOfWNXlsNt3/view" style="color: blue;">Setup_r1mini_protocol_test.msi</a>
+            </p>
+            <h4><section style="padding: 0;" id="get-started12">
+              사용 방법
+              </section>
+            </h4>
+            <p>
+              먼저 아래 그림과 같이 로봇과 함께 제공되는 USB-to-Serial 포트를 로봇에 연결합니다.
+            </p>
+            <img src="{% static 'main/assets/img/details5/1.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <span style="text-align: center; font-size: 13px; color: rgba(136,153,168,1.00); margin: auto; display: block;">시리얼 포트 연결 위치</span>
+            <p><br/>
+              시작 버튼을 누르고 방금 설치한 OMO R1mini ProtocolTest 프로그램을 실행합니다.
+            </p>
+            <img src="{% static 'main/assets/img/details5/2.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <p><br/>
+              아래 그림과 같이 프로그램이 실행되면 시리얼 포트를 선택하고 Open을 눌러 포트를 엽니다.
+            </p>
+            <img src="{% static 'main/assets/img/details5/3.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <p><br/>
+              좌측의 Drop-down 메뉴에서 명령어를 선택하면 해당 명령어에따라 자동으로 전달인자가 활성화 됩니다. 
+            </p>
+            <img src="{% static 'main/assets/img/details5/4.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <span style="text-align: center; font-size: 13px; color: rgba(136,153,168,1.00); margin: auto; display: block;">명령어 선택 화면</span>
+            <p><br/>
+              적절한 전달인자 값을 입력하고 우측의 Send 버튼을 누르면 해당 명령이 로봇에 전송됩니다.
+            </p>
+            <p>
+              로봇의 펌웨어 버전을 확인하고자 하는 경우 qFIRMV 를 선택하고 전송을 누르면 아래와 같이 로봇에 설치된 펌웨어 버전을 반환합니다. 
+            </p>
+            <img src="{% static 'main/assets/img/details5/5.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <span style="text-align: center; font-size: 13px; color: rgba(136,153,168,1.00); margin: auto; display: block;">qFIRMV 명령 요청</span>
+            <p><br/>
+              그밖에 cVW 또는 cDIFFV 등의 명령어로 바퀴 속도를 지정할 수 있습니다.
+            </p> 
+            <p>
+              임의의 명령을 전송하고싶으면 <a style="font-weight: bold">수동 버튼</a>을 눌러 설정합니다. 
+            </p>
+            <p>
+              주기를 설정하고 반복 횟수를 입력하거나, 무한반복을 선택한 다음 전송 버튼을 누르면 해당 횟수만큼 메세지를 반복하여 전송합니다.
+            </p>
+            <img src="{% static 'main/assets/img/details5/6.png'%}" alt="" class="img-fluid services-img" style="display: block; margin: auto;">
+            <span style="text-align: center; font-size: 13px; color: rgba(136,153,168,1.00); margin: auto; display: block;">반복 요청하기</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'common/footer.html'%}
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'main/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main/assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

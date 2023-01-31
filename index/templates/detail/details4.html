@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="kr">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>E3I2조 - 제품 설명 자세히 보기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'main/assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'main/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'main/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'main/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'main/assets/css/main.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+{% include 'common/nav.html'%}
+
+<!-- Modal -->
+
+  
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url({% static 'main/assets/img/rimini/Rimini_robot_3.png'%});">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+
+        <h2>자세히 보기</h2>
+        <ol>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'details' 0%}">About</a></li>
+          <li>Detail</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Service Details Section ======= -->
+    <section style="padding: 40px;" id="service-details" class="service-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="services-list">
+              <a href="{% url 'details' 1%}">로봇 살펴보기</a>
+              <a href="{% url 'details' 2%}">로봇 ON/OFF</a>
+              <a href="{% url 'details' 3%}">충전하기</a>
+              <a href="{% url 'details' 4%}" class="active">통신 명령표</a>
+              <a href="{% url 'details' 5%}">Protocol Test Programs</a>
+              <a href="{% url 'details' 6%}">시리얼 통신으로 로봇 다루기</a>
+            </div>
+
+            <h4><a href="#get-started1" style="color: #364d59;">통신 명령표</a></h4>
+            <p><a href="#get-started11" style="color: #364d59;">R1mini 통신표 요약</a></p>
+            <p><a href="#get-started12" style="color: #364d59;">통신표</a></p>
+          </div>
+
+          <div class="col-lg-8">
+            <h2 style="font-weight: bold;"><section style="padding: 0;" id="get-started1">통신 명령표</section></h2>
+            <h3 style="color: rgba(136,153,168,1.00);">본 페이지는 R1mini와의 통신 명령을 설명하는 페이지입니다.</h3>
+            <br/>
+            <h3><section style="padding: 0;" id="get-started11">R1mini 통신표 요약</section></h3>
+            <a style="color: rgba(136,153,168,1.00);" data-aos="fade-up" data-aos-delay="200" href="#get-started12" class="btn-get-started">통신표 보기</a>
+            <br>
+            <p>
+              시리얼 통신 규격은 다음과 같습니다.
+            </p>
+            <p>
+              "시작문자 $"+"Prefix 문자"+"명령어 키워드"+","+"전달인자"..."\r\n"
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>시작 문자: "$" (0x24)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Prefix: C(명령), S(내부 플래시 저장), Q(자료 요청)</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>명령어 키워드: 아래 통신명령어 목록을 참조하세요.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>전달인자: 컴마(",")로 구분되며 각 명령어에 따라 전달할 수 있는 인자의 갯수가 정해져있습니다.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>종결 문자: "\r\n" 또는 0x0D(13), 0x0A(10)</span></li>
+            </ul>
+            <p>
+              통신명령어 목차<br/>R1mini에서 지원하는 명령어 목록은 다음과 같습니다. (REV 2.2 기준)
+            </p>
+              <h3><section style="padding-bottom: 5px;" id="get-started12">통신표</section></h3>
+              <style type="text/css">
+                .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+                .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+                  font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+                  font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+                .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+                .tg .tg-abip{background-color:#f9f9f9;border-color:inherit;text-align:center;vertical-align:top}
+                .tg .tg-btxf{background-color:#f9f9f9;border-color:inherit;text-align:left;vertical-align:top}
+                </style>
+                <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-c3ow"> prefix  </th>
+                    <th class="tg-c3ow">명령</th>
+                    <th class="tg-c3ow">설명</th>
+                    <th class="tg-c3ow">인자1</th>
+                    <th class="tg-c3ow">인자2</th>
+                    <th class="tg-c3ow">인자3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">VW</td>
+                    <td class="tg-0pky">로봇 속도 설정</td>
+                    <td class="tg-btxf">종방향 속도 (mm/s)</td>
+                    <td class="tg-0pky">선회율 (mrad/s) </td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">VW</td>
+                    <td class="tg-0pky">로봇 속도 확인</td>
+                    <td class="tg-btxf">종방향 속도 (mm/s)</td>
+                    <td class="tg-0pky">선회율 (mrad/s)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">DIFFV</td>
+                    <td class="tg-0pky">바퀴 속도 설정</td>
+                    <td class="tg-btxf">왼쪽 바퀴 속도 (mm/s)</td>
+                    <td class="tg-0pky">오른쪽 바퀴 속도 (mm/s)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">DIFFV</td>
+                    <td class="tg-0pky">바퀴 속도 확인</td>
+                    <td class="tg-btxf">왼쪽 바퀴 속도 (mm/s)</td>
+                    <td class="tg-0pky">오른쪽 바퀴 속도 (mm/s)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">RPM</td>
+                    <td class="tg-0pky">바퀴 회전 속도</td>
+                    <td class="tg-btxf">왼쪽 바퀴(RPM)</td>
+                    <td class="tg-0pky">오른쪽 바퀴(RPM)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">RPM</td>
+                    <td class="tg-0pky">바퀴 회전 속도</td>
+                    <td class="tg-btxf">왼쪽 바퀴(RPM)</td>
+                    <td class="tg-0pky">오른쪽 바퀴(RPM)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">MOVE</td>
+                    <td class="tg-0pky">바퀴 이동</td>
+                    <td class="tg-btxf">왼쪽 바퀴 이동거리<br>(mm)</td>
+                    <td class="tg-0pky">오른쪽 바퀴 이동거리<br>(mm)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">MOVE</td>
+                    <td class="tg-0pky">남은 거리</td>
+                    <td class="tg-btxf">왼쪽 바퀴 남은 이동거리<br>(mm)</td>
+                    <td class="tg-0pky">오른쪽 바퀴 남은 이동거리<br>(mm)</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">MVP</td>
+                    <td class="tg-0pky">위치제어 파라미터 설정</td>
+                    <td class="tg-btxf">P게인</td>
+                    <td class="tg-0pky">왼쪽 바퀴 속도</td>
+                    <td class="tg-btxf">오른쪽 바퀴 속도</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">ENCOD</td>
+                    <td class="tg-0pky">엔코더 펄스</td>
+                    <td class="tg-btxf">왼쪽 바퀴 누적 펄스</td>
+                    <td class="tg-0pky">오른쪽 바퀴 누적 펄스</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">ENCOD</td>
+                    <td class="tg-0pky">엔코더 펄스 리셋</td>
+                    <td class="tg-btxf">0</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">BAT</td>
+                    <td class="tg-0pky">배터리 전원</td>
+                    <td class="tg-btxf">전압*10</td>
+                    <td class="tg-0pky">SOC</td>
+                    <td class="tg-btxf">전류*1000</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">BUZEN</td>
+                    <td class="tg-0pky">부저 On/off</td>
+                    <td class="tg-btxf">0: Off/1: On</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">BUZEN</td>
+                    <td class="tg-0pky">부저 상태</td>
+                    <td class="tg-btxf">0: Off/1: On</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">COLOR</td>
+                    <td class="tg-0pky">RGB LED</td>
+                    <td class="tg-btxf">R 0~255 세팅</td>
+                    <td class="tg-0pky">G 0~255 세팅</td>
+                    <td class="tg-btxf">B 0~255 세팅</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">s</td>
+                    <td class="tg-abip">COLOR</td>
+                    <td class="tg-0pky">RGB LED</td>
+                    <td class="tg-btxf">R 0~255 세팅 저장</td>
+                    <td class="tg-0pky">G 0~255 세팅 저장</td>
+                    <td class="tg-btxf">B 0~255 세팅 저장</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">COLOR</td>
+                    <td class="tg-0pky">RGB LED</td>
+                    <td class="tg-btxf">R 0~255 확인</td>
+                    <td class="tg-0pky">G 0~255 확인</td>
+                    <td class="tg-btxf">B 0~255 확인</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">BREATH</td>
+                    <td class="tg-0pky">심장 LED</td>
+                    <td class="tg-btxf">R 0~255 세팅</td>
+                    <td class="tg-0pky">G 0~255 세팅</td>
+                    <td class="tg-btxf">B 0~255 세팅</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">PERI</td>
+                    <td class="tg-0pky">주기성응답</td>
+                    <td class="tg-btxf">주기(ms)</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">REGI</td>
+                    <td class="tg-0pky">주기성항목</td>
+                    <td class="tg-btxf">주</td>
+                    <td class="tg-0pky">명령어</td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">c</td>
+                    <td class="tg-abip">PEEN</td>
+                    <td class="tg-0pky">주기성명령 시작</td>
+                    <td class="tg-btxf">0: 정지, 1: 시작</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">CONTR</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf">N ID</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">s</td>
+                    <td class="tg-abip">TMOUT</td>
+                    <td class="tg-0pky">제어 명령 타임아웃 시간 저장</td>
+                    <td class="tg-btxf">시간 (ms)</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">TMOUT</td>
+                    <td class="tg-0pky">제어 명령 타임아웃 확인</td>
+                    <td class="tg-btxf">시간 (ms)</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">FIRMV</td>
+                    <td class="tg-0pky">펌웨어 버전</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">s</td>
+                    <td class="tg-abip">ENCNT</td>
+                    <td class="tg-0pky">바퀴 1회전당 엔코더 펄스 갯수 설정</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">ENCNT</td>
+                    <td class="tg-0pky">바퀴 1회전당 엔코더 펄스 갯수 확인</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">TRACK</td>
+                    <td class="tg-0pky">바퀴간 거리</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">s, q</td>
+                    <td class="tg-abip">WHLD</td>
+                    <td class="tg-0pky">바퀴 지름</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">GEAR</td>
+                    <td class="tg-0pky">GEAR 비 조회</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">s</td>
+                    <td class="tg-abip">GEAR</td>
+                    <td class="tg-0pky">GEAR 비 인가, X10 할 것</td>
+                    <td class="tg-btxf">기어비*10</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-abip">PID</td>
+                    <td class="tg-0pky">PID</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-abip">MAXSPD</td>
+                    <td class="tg-0pky">최대 속도</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">POSE</td>
+                    <td class="tg-0pky">Euler 자세</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">ACCL</td>
+                    <td class="tg-0pky">가속도 데이터</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">GYRO</td>
+                    <td class="tg-0pky">자이로 데이터</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">s</td>
+                    <td class="tg-abip">CALG</td>
+                    <td class="tg-0pky">자이로 캘리브레이션 수행</td>
+                    <td class="tg-btxf"></td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0pky">q</td>
+                    <td class="tg-abip">TIME</td>
+                    <td class="tg-0pky">전원 인가 후 경과시간</td>
+                    <td class="tg-btxf">누적시간 ms</td>
+                    <td class="tg-0pky"></td>
+                    <td class="tg-btxf"></td>
+                  </tr>
+                </tbody>
+                </table>
+              </section>
+          </div>
+
+        </div>
+
+      </div>
+        <!-- End Service Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include 'common/footer.html'%}
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'main/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+  <script src="{% static 'main/assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'main/assets/vendor/php-email-form/validate.js'%}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'main/assets/js/main.js'%}"></script>
+
+</body>
+
+</html>

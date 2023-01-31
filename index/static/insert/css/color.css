@@ -1,0 +1,11 @@
+
+
+.led{
+  margin: 0;
+  background-size: 80% 80%;
+}
+
+.progress-bar-col{
+    background : conic-gradient(#F6F6F6; 0% 100%);
+}
+
