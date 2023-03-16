@@ -1,1 +1,1 @@
-# mini99
+Django omorobot pro(mini project)
